@@ -1,8 +1,8 @@
 const MyContract = artifacts.require("MyContract");
-const TokenOBT = artifacts.require("TokenOBT");
+const TokenBTS = artifacts.require("TokenBTS");
 
 module.exports = function(deployer) {
-  deployer.deploy(TokenOBT)
+  deployer.deploy(TokenBTS)
     .then((Token) => {
       return deployer.deploy(MyContract, Token.address);
     });

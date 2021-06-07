@@ -3,12 +3,12 @@ pragma solidity >=0.4.25 <0.6.0;
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MyContract.sol";
-import "../contracts/TokenOBT.sol";
+import "../contracts/TokenBTS.sol";
 
 
 contract TestRockPaperScissors {
   function testInitialBalanceUsingDeployedContract() public {
-    TokenOBT token = TokenOBT(DeployedAddresses.TokenOBT());
+    TokenBTS token = TokenBTS(DeployedAddresses.TokenBTS());
 
     uint expected = 100000;
 

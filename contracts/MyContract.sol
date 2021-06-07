@@ -18,7 +18,7 @@ contract MyContract
 
     constructor(address tokenAddr) public
     {
-        Token = TokenOBT(tokenAddr);
+        Token = TokenBTS(tokenAddr);
     }
 
     
