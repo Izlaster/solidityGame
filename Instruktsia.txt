@@ -1,0 +1,33 @@
+truffle migrate
+truffle console
+
+let contract = await MyContract.deployed()
+let accounts = await web3.eth.getAccounts()
+let token = await TokenOBT.deployed()
+let iAddress = contract.address
+let tAddress = token.address
+
+let fPlayer = accounts[0]
+let sPlayer = accounts[1]
+
+const balance = await token.balanceOf(fPlayer)
+
+await token.transfer(sPlayer, 50000)
+const balance1 = await token.balanceOf(fPlayer)
+const balance2 = await token.balanceOf(sPlayer)
+
+await token.approve(iAddress, 5000)
+await token.approve(iAddress, 5000, { from: sPlayer })
+const allowanceF = await token.allowance(fPlayer, iAddress)
+const allowanceS = await token.allowance(sPlayer, iAddress)
+
+contract.RegMe({from:fPlayer})
+contract.RegMe({from:sPlayer})
+contract.TryNumber(3, {from:fPlayer})
+contract.TryNumber(9, {from:sPlayer})
+contract.GetRez()
+
+await token.balanceOf(fPlayer)
+await token.balanceOf(sPlayer)
+
+contract.ClearAllData()
