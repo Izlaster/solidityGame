@@ -2,7 +2,7 @@ require('mocha');
 const { assert } = require('chai');
 
 const MyContract = artifacts.require('MyContract');
-const TokenOBT = artifacts.require('TokenBTS');
+const TokenOBT = artifacts.require('TokenPRNHB');
 
 
 contract('MyContract', (accounts) => {

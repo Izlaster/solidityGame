@@ -1,9 +1,9 @@
 pragma solidity >=0.4.22 <0.9.0;
-import "./TokenOBT.sol";
+import "./TokenPRNHB.sol";
 
 contract MyContract
 {
-    TokenOBT public Token;
+    TokenPRNHB public Token;
     uint count = 0;
     address player1;
     address player2;
@@ -18,7 +18,7 @@ contract MyContract
 
     constructor(address tokenAddr) public
     {
-        Token = TokenBTS(tokenAddr);
+        Token = TokenPRNHB(tokenAddr);
     }
 
     

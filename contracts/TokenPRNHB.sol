@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.4.22 <0.9.0;
 
-contract TokenBTS {
+contract TokenPRNHB {
     // Public variables of the token
     string public name;
     string public symbol;
@@ -26,7 +26,7 @@ contract TokenBTS {
      */
     constructor() public {
         name = "GodnessToken";
-        symbol = "BTS";
+        symbol = "PRNHB";
         totalSupply = 100000;  // Update total supply with the decimal amount
         balanceOf[msg.sender] = totalSupply;
     }
