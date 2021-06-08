@@ -18,8 +18,6 @@ const balance2 = await token.balanceOf(sPlayer)
 
 await token.approve(iAddress, 5000)
 await token.approve(iAddress, 5000, { from: sPlayer })
-const allowanceF = await token.allowance(fPlayer, iAddress)
-const allowanceS = await token.allowance(sPlayer, iAddress)
 
 contract.RegMe({from:fPlayer})
 contract.RegMe({from:sPlayer})
