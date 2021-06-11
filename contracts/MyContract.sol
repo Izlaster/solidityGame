@@ -11,7 +11,7 @@ contract MyContract
     uint public numb2;
     uint public rand;
     uint winner;
-    uint256 BID = uint256(100);
+    uint256 BID = uint256(5000);
 
     event WhoPushed(address player);
     event ShowRandomVal(uint random);
@@ -39,12 +39,11 @@ contract MyContract
     function RegMe() isRegistered() public {
         if (int(player1) == 0) {
             player1 = msg.sender;
-            Token.transferFrom(msg.sender, address(this), BID);
         }
         else if (int(player2) == 0) {
             player2 = msg.sender;
-            Token.transferFrom(msg.sender, address(this), BID);
         }
+        Token.transferFrom(msg.sender, address(this), BID);
     }
 
     function TryNumber(uint number) isBothReg() public {

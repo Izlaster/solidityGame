@@ -5,7 +5,6 @@ import "truffle/DeployedAddresses.sol";
 import "../contracts/MyContract.sol";
 import "../contracts/TokenPRNHB.sol";
 
-
 contract TestMyContract {
   function testInitialBalanceUsingDeployedContract() public {
     TokenPRNHB token = TokenPRNHB(DeployedAddresses.TokenPRNHB());
